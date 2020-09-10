@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        .boton {
+            border-radius: 4px;
+        }
+        
+        .requerido {
+            font-size: .9em;
+            color: red;
+        }
+        
+        .informacion {
+            margin-top: 5em;
+            width: 400px;
+        }
+        
+        .izquierda {
+            float: left;
+            width: 200px;
+        }
+        
+        .izquierda label {
+            padding-top: 3px;
+        }
+        
+        .derecha {
+            float: right;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Formulario, Ejercicio Daniel</h2>
+    <form name="formularioEjercicio">
+        <p>
+            <label for="usuario">Usuario</label><br>
+            <input type="text" name="usuario" id="usr" placeholder="Digita tu usuario..." /><br>
+            <span class="requerido" id="mensajeUsr"></span>
+        </p>
+        <p>
+            <label for="contrasena">Contraseña</label><br>
+            <input type="password" name="contrasena" id="cnt" placeholder="Contraseña" /><br>
+            <span class="requerido" id="mensajeCnt"></span>
+        </p>
+        <p>
+            <label for="genero">Genero</label><br>
+            <input type="radio" name="genero" value="h"> Hombre <br>
+            <input type="radio" name="genero" value="m"> Mujer <br>
+            <input type="radio" name="genero" value="n"> No binario <br>
+            <input type="radio" name="genero" value="t"> Trans <br>
+            <span class="requerido" id="mensajeGnr"></span>
+        </p>
+        <p>
+            <label for="ubicacion">Ubicación</label><br>
+            <select id="ubicacion" name="ubicacion">
+                <option value="">...</option>
+                <option value="bog">Bogotá</option>
+                <option value="am">Área métropolitana</option>                
+            </select><br>
+            <span class="requerido" id="mensajeUbx"></span>
+        </p>
+        <p>
+            <label for="terminos"><input type="checkbox" name="terminos" id="terminos" value="valor"> Acepto terminos y condiciones.</label><br>
+            <span class="requerido" id="mensajeTrm"></span>
+        </p>
+        <p>
+            <button class="boton" onclick="return Validar()">Enviar</button>
+        </p>
+    </form>
+
+    <div id="infoform" class="informacion">
+        <hr>
+        <h4>Información del formulario</h4>
+        <div class="izquierda">
+            <label for="usrf">Usuario: </label><br>
+            <label for="ctr">Contraseña: </label><br>
+            <label for="gnr">Genero: </label><br>
+            <label for="ubx">Ubicación: </label><br>
+            <label for="trm">Acepta terminos: </label><br>
+        </div>
+        <div class="derecha">
+            <input type="text" name="usrf" id="usrf" disabled><br>
+            <input type="text" name="ctr" id="ctr" disabled><br>
+            <input type="text" name="gnr" id="gnr" disabled><br>
+            <input type="text" name="ubx" id="ubx" disabled><br>
+            <input type="text" name="trm" id="trm" disabled><br>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
